@@ -29,7 +29,7 @@ const CarCard = ({ car }: carCardProps) => {
         </div>
         <p className='flex mt-6 text-[32px] font-extrabold'>
             <span className="self-start text-[14px] font-semibold">
-                $
+                KES.
             </span>
                 {carRent}
             <span className="self-end text-[14px] font-medium">
