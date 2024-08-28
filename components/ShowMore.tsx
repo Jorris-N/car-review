@@ -19,7 +19,7 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
     // Update the "limit" search parameter in the URL with the new value
     const newPathname = updateSearchParams("limit", `${newLimit}`);
     
-    router.push(newPathname);
+    router.push(newPathname, { scroll:false });
   };
 
   return (
@@ -28,7 +28,7 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
         <CustomButton
           btnType="button"
           title="Show More"
-          containerStyles="bg-primary-blue rounded-full text-white"
+          containerStyles="bg-red-800 rounded-full text-white"
           handleClick={handleNavigation}
         />
       )}
