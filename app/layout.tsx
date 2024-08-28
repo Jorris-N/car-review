@@ -15,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="relative">
+      <head>
+        <link rel="icon" href="/logo1.png" type="image/x-icon" sizes="any" />
+      </head>
+
+      <body className='relative bg-gradient-to-r from-gray-100 to-gray-300'>
       <Navbar/>
         {children}
         <Footer/>
