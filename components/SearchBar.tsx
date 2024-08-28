@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import SearchManufacturer from "./SearchManufacturer";
 
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => (
-  <button type='submit' className={`-ml-3 z-10 ${otherClasses}`}>
+  <button type='submit' className={`-ml-10 z-10 ${otherClasses}`}>
     <Image
       src={"/magnifying-glass.svg"}
       alt={"magnifying glass"}
@@ -57,7 +57,7 @@ const SearchBar = () => {
     // Generate the new pathname with the updated search parameters
     const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
 
-    router.push(newPathname);
+    router.push(newPathname, { scroll:false });
   };
 
   return (
@@ -69,7 +69,7 @@ const SearchBar = () => {
         />
         <SearchButton otherClasses='sm:hidden' />
       </div>
-      <div className='searchbar__item'>
+      <div className='searchbar__item ml-4'>
         <Image
           src='/model-icon.png'
           width={25}
@@ -82,7 +82,7 @@ const SearchBar = () => {
           name='model'
           value={model}
           onChange={(e) => setModel(e.target.value)}
-          placeholder='Tiguan...'
+          placeholder='Passat'
           className='searchbar__input'
         />
         <SearchButton otherClasses='sm:hidden' />
