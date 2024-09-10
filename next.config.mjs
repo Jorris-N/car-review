@@ -1,8 +1,28 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ["cdn.imagin.studio", "api.carsxe.com"]
-    }
-};
-
-export default nextConfig;
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'cdn.imagin.studio',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'api.carsxe.com',
+          port: '',
+          pathname: '/**',
+        },
+        {
+          protocol: 'https',
+          hostname: 'vehicle-images2.p.rapidapi.com',
+          port: '',
+          pathname: '/**',
+        },
+      ],
+    },
+  };
+  
+  export default nextConfig;
+  
